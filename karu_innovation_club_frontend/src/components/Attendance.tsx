@@ -2,10 +2,11 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState, AppDispatch } from '../redux/store';
 import { fetchAttendance } from '../redux/attendanceSlice';
+import { AttendanceRecord } from '../types/attendance';
 
 const Attendance: React.FC = () => {
   const dispatch = useDispatch<AppDispatch>();
-  const attendance = useSelector((state: RootState) => state.attendance.attendance);
+  const attendance = useSelector((state: RootState) => state.attendance.attendance) as AttendanceRecord[];
   const attendanceStatus = useSelector((state: RootState) => state.attendance.status);
   const error = useSelector((state: RootState) => state.attendance.error);
 
@@ -40,3 +41,4 @@ const Attendance: React.FC = () => {
 };
 
 export default Attendance;
+
