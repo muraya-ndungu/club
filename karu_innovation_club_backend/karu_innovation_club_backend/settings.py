@@ -26,7 +26,6 @@ INSTALLED_APPS = [
     'rest_framework',  # If you plan to use Django REST Framework
     'corsheaders',     # For handling CORS
     'django.contrib.contenttypes',
-    'rest_framework',
     'rest_framework_simplejwt',
     'django.contrib.sessions',
     'django.contrib.messages',
