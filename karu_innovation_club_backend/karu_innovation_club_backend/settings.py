@@ -26,6 +26,8 @@ INSTALLED_APPS = [
     'rest_framework',  # If you plan to use Django REST Framework
     'corsheaders',     # For handling CORS
     'django.contrib.contenttypes',
+    'rest_framework',
+    'rest_framework_simplejwt',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -41,6 +43,18 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
+}
 # Allow your React frontend to access the API
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
