@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
+    "karu_innovation_club_frontend": "file:",
     "react-router-dom": "^6.26.0"
   }
 }
