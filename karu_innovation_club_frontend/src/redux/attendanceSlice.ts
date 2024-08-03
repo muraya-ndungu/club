@@ -1,6 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { AttendanceRecord } from '../types/attendance';
+import { AttendanceRecord } from '../Types/attendance';
 
 // Define the async thunk with proper typing
 export const fetchAttendance = createAsyncThunk<AttendanceRecord[]>(
