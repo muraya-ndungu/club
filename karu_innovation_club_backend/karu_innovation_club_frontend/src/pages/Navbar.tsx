@@ -11,11 +11,9 @@ const Navbar: React.FC = () => {
         </div>
         <div className="hidden md:flex space-x-6">
           <Link to="/" className="text-gray-800 hover:text-blue-500">Home</Link>
+          <Link to="/communities" className="text-gray-800 hover:text-blue-500">Communities</Link>
           <Link to="/register" className="text-gray-800 hover:text-blue-500">Register</Link>
           <Link to="/login" className="text-gray-800 hover:text-blue-500">Login</Link>
-          <Link to="/events" className="text-gray-800 hover:text-blue-500">Events</Link>
-          <Link to="/projects" className="text-gray-800 hover:text-blue-500">Projects</Link>
-          <Link to="/communities" className="text-gray-800 hover:text-blue-500">Communities</Link>
         </div>
         <div className="md:hidden flex items-center">
           <button className="outline-none mobile-menu-button">
@@ -39,20 +37,15 @@ const Navbar: React.FC = () => {
             <Link to="/" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Home</Link>
           </li>
           <li>
+             <Link to="/communities" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Communities</Link>
+          </li>
+          <li>
             <Link to="/register" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Register</Link>
           </li>
           <li>
             <Link to="/login" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Login</Link>
           </li>
-          <li>
-            <Link to="/events" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Events</Link>
-          </li>
-          <li>
-            <Link to="/projects" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Projects</Link>
-          </li>
-          <li>
-            <Link to="/communities" className="block text-sm px-2 py-4 text-gray-800 hover:bg-gray-200">Communities</Link>
-          </li>
+      
         </ul>
       </div>
     </nav>

@@ -12,6 +12,24 @@ body, html {
     color: #333;
   }
   
+  @keyframes marquee {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  
+  .animate-marquee {
+    animation: marquee 10s linear infinite;
+  }
+  
+  .animate-marquee-reverse {
+    animation: marquee-reverse 10s linear infinite;
+  }
+  
   a {
     text-decoration: none;
     color: inherit;
@@ -55,6 +73,10 @@ body, html {
   }
   
   /* Home page styles */
+  .hom{
+    background-image: url('src/assets/images/userinterface.jpg');
+    @apply bg-cover bg-center;
+  }
   .home {
     padding: 4rem 1rem;
     text-align: center;

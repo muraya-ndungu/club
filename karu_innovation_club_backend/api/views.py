@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from rest_framework import generics
+from rest_framework import generics, status
 from django.contrib.auth.models import User
 from .serializers import UserSerializer
 from .models import UserProfile
